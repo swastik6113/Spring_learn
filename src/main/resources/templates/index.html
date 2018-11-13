@@ -1,0 +1,45 @@
+<html ng-app="myModule1">
+<head>
+    <script src="/webjars/angularjs/angular.min.js"></script>
+    <script src="js/script.js"></script>
+</head>
+<body>
+<div ng-controller="mycontroller1">
+    <div>
+    Name:<input type="text" ng-model="fields.studentname"><br>
+    Address:<input type="text" ng-model="fields.studentaddress">
+    Salary:<input type="text" ng-model="fields.studentsalary">
+    <input type="button" value="Add Student" ng-click="add()">
+
+    <table border="1">
+        <thead>
+        <tr>
+            <td>Student id</td>
+            <td>Student name</td>
+            <td>Student address</td>
+            <td>Salary</td>
+        </tr>
+        </thead>
+        <tbody>
+        <tr ng-repeat="student in students">
+            <td>{{student.student_id}}</td>
+            <td>{{student.studentname}}</td>
+            <td>{{student.studentaddress}}</td>
+            <td>{{student.studentsalary}}</td>
+        </tr>
+        </tbody>
+    </table>
+    <br>
+    The Last request status is {{status}}
+</div>
+    <div>
+        Search Student :<input type="text" ng-model="id">
+        <br>
+        <input type="button" value="Search" ng-click="search()">
+
+        Studne searched :{{studentresult.studentname}}
+
+    </div>
+</div>
+</body>
+</html>

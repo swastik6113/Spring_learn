@@ -1,0 +1,13 @@
+spring:
+  application:
+    name: Spring_learn
+  datasource:
+    url: jdbc:postgresql://localhost:5432/postgres
+    username: postgres
+    password: Admin
+  jpa:
+    hibernate:
+      ddl-auto: update
+
+server:
+  port: 9090
